@@ -1,12 +1,12 @@
-# Educational Keylogger & Client-Server System
+# Java Client-Server Educational System
 
 <div align="center">
 
 ![Java](https://img.shields.io/badge/Java-17+-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Purpose](https://img.shields.io/badge/Purpose-Educational-orange.svg)
 
-**A comprehensive educational suite demonstrating networking, GUI development, and system programming**
+**A multi-threaded client-server system demonstrating Java networking, GUI development, and database integration**
 
 </div>
 
@@ -23,56 +23,10 @@
 
 ## 📚 Project Overview
 
-This educational suite includes three interconnected components that demonstrate real-world software development concepts:
+This educational Java project demonstrates a complete client-server architecture with:
 
-1. **Educational Keylogger** (Python) - System programming and event handling
-2. **Client GUI Application** (Java) - Swing GUI and network communication
-3. **Multi-threaded Server** (Java) - Server architecture and database integration
+1. **ClientGUI** - A Swing-based client application with real-time messaging
+2. **Server** - A multi-threaded server with connection pooling and database integration
+3. **Advanced Features** - Thread management, security, and performance optimization
 
-## 🛠️ System Architecture
-┌─────────────────┐ ┌──────────────────┐ ┌─────────────────┐
-│ Keylogger │ │ Client GUI │ │ Java Server │
-│ (Python) │ │ (Java Swing) │ │ (Multi-thread) │
-├─────────────────┤ ├──────────────────┤ ├─────────────────┤
-│ • Event capture │ │ • Real-time chat │ │ • Thread pool │
-│ • File logging │◄───│ • Connection mgmt│◄──►│ • Connection │
-│ • Analytics │ │ • Error handling │ │ pooling │
-└─────────────────┘ └──────────────────┘ └─────────┬───────┘
-│
-▼
-┌─────────────────┐
-│ Database │
-│ (MariaDB) │
-└─────────────────┘
-
-
-## 📁 Project Structure
-educational-suite/
-├── java/
-│ ├── ClientGUI.java
-│ ├── Server.java
-│ └── server.properties
-│
-├── docs/
-│ └── ARCHITECTURE.md
-│
-└── README.md
-
-
-## 🚀 Quick Start Guide
-
-### Prerequisites
-- **Java 17+** JDK
-- **MariaDB/MySQL** database
-- **Network connectivity** for client-server communication
-
-### Installation
--- Create database and table for server
-CREATE DATABASE mydb;
-USE mydb;
-
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+## 🏗️ System Architecture
