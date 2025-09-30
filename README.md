@@ -3,7 +3,6 @@
 <div align="center">
 
 ![Java](https://img.shields.io/badge/Java-17+-blue.svg)
-![Python](https://img.shields.io/badge/Python-3.6+-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Purpose](https://img.shields.io/badge/Purpose-Educational-orange.svg)
 
