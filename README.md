@@ -41,4 +41,62 @@ This educational Java project demonstrates a complete client-server architecture
 └─────────────────┘ │ • Command │
 │ Processing │
 └──────────────────┘
+## 📁 Project Structure
+java-client-server/
+│
+├── src/
+│ ├── ClientGUI.java # Swing client application
+│ ├── Server.java # Multi-threaded server
+│ ├── ClientHandler.java # Client connection handler
+│ ├── ConnectionPool.java # Database connection pool
+│ └── ServerConfig.java # Configuration management
+│
+├── config/
+│ └── server.properties # Server configuration
+│
+├── lib/ # Database drivers
+│ └── mariadb-java-client-3.0.6.jar
+│
+└── README.md
 
+
+## 🚀 Quick Start
+
+### Prerequisites
+- **Java 17 or higher**
+- **MariaDB/MySQL database**
+- **Network connectivity**
+
+### Database Setup
+```sql
+CREATE DATABASE mydb;
+USE mydb;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO users (username, email) VALUES ('testuser', 'test@example.com');
+Installation & Execution
+Compile the Java classes:
+
+
+javac -cp .:lib/mariadb-java-client-3.0.6.jar src/*.java
+Configure the server (optional):
+
+
+# Create server.properties in config/ directory
+echo "db.url=jdbc:mariadb://localhost:3306/mydb" > config/server.properties
+echo "db.username=your_username" >> config/server.properties
+echo "db.password=your_password" >> config/server.properties
+Start the server:
+
+
+java -cp .:lib/mariadb-java-client-3.0.6.jar Server
+Start the client:
+
+
+java -cp .:lib/mariadb-java-client-3.0.6.jar ClientGUI
