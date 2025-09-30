@@ -30,3 +30,15 @@ This educational Java project demonstrates a complete client-server architecture
 3. **Advanced Features** - Thread management, security, and performance optimization
 
 ## 🏗️ System Architecture
+┌─────────────────┐ ┌──────────────────┐ ┌─────────────────┐
+│ ClientGUI │ │ Server │ │ Database │
+│ (Swing GUI) │◄────────►│ (Multi-thread) │◄────────►│ (MariaDB) │
+├─────────────────┤ TCP ├──────────────────┤ JDBC ├─────────────────┤
+│ • Real-time UI │ Socket │ • Thread Pool │ │ • User data │
+│ • Connection │ │ • Connection │ │ • Application │
+│ Management │ │ Pooling │ │ data │
+│ • Error Handling│ │ • Security │ └─────────────────┘
+└─────────────────┘ │ • Command │
+│ Processing │
+└──────────────────┘
+
